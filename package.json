@@ -1,0 +1,43 @@
+{
+  "name": "keywords-finder",
+  "version": "0.0.1",
+  "description": "a keywords-finder for Word",
+  "main": "index.js",
+  "bin": {
+    "search": "./src/index.js"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node ./src/index.js",
+    "pkg": "rimraf pkg-dist && pkg . --targets=node8-win-x64,node8-macos-x64,node8-linux-x64 --out-path pkg-dist"
+  },
+  "pkg": {
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "assets": [
+      "node_modules/chalk/**",
+      "node_modules/mammoth/**/**",
+      "node_modules/textract/**/**",
+      "node_modules/epub2/**/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhao-jun/keywords-finder.git"
+  },
+  "author": "zhao-jun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhao-jun/keywords-finder/issues"
+  },
+  "homepage": "https://github.com/zhao-jun/keywords-finder#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "mammoth": "^1.4.6",
+    "pkg": "^4.3.4",
+    "rimraf": "^2.6.2",
+    "textract": "^2.4.0"
+  }
+}
