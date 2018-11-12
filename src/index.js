@@ -18,9 +18,9 @@ const searchPathTop = resolve('./');
 let keyWord = '';
 const results = [];
 const keywordsFile = 'keywords.txt';
-const resName = '搜索结果.txt';
-const resError = 'error.txt';
-const runError = 'runtime-error.txt';
+const resName = 'keywords-result.txt';
+const resError = 'keywords-error.txt';
+const runError = 'keywords-runtime-error.txt';
 const search = async (searchPath, loop) => {
   let files = fs.readdirSync(searchPath);
   let keyWords = keyWord.split('=');
@@ -69,7 +69,7 @@ const search = async (searchPath, loop) => {
       chalk.blue(`\n搜索完成！请查看 ${path.join(searchPathTop, resName)}`)
     );
   }
-  setTimeout(() => {}, 10000);
+  // setTimeout(() => {}, 10000);
 };
 
 // 捕获异常

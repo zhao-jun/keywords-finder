@@ -1,3 +1,6 @@
 .gitignore
 package.json
 yarn.lock
+README.md
+keywords.txt
+test/
